@@ -1,0 +1,50 @@
+Carl's office hours 10PM - 1AM (during his gym workout - get used to it)
+
+method chaining (named parameter idiom)
+  common syntax for invoking multiple method calls in oop languages
+  each method returns an object,
+    allowing the calls to be chained together in a single statement w/o requiring variables to store immediate results
+  AKA "train wreck" due to the increase in the number of methods that come one after another
+
+VS
+
+method cascading
+  after the method call the expression evaluates to the current object, not the return value of the method.
+  can be implemented using method chaining by having the method return the current object itself.
+  key technique in fluent interfaces.
+
+
+"brackets" = ()parentheses (lazy, less syllables)
+"square brackets" = []brackets
+"braces" = {}
+    per Carl: if you hear "brackets" use parentheses
+
+
+POLYMORPHISM
+## We create two classes:
+
+  class Bear(object):
+    def sound(self):
+      print "Groarrr"
+
+  class Dog(object):
+    def sound(self):
+      print "Woof woof!"
+
+
+## both can make a distinct sound
+
+def makeSound(animalType):
+  animalType.sound()
+
+
+## Make two instances
+
+bearObj = Bear()
+dogObj = Dog()
+
+
+## Call their action using the same method
+
+makeSound(bearObj)
+makeSound(dogObj)
