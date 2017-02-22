@@ -48,3 +48,41 @@ dogObj = Dog()
 
 makeSound(bearObj)
 makeSound(dogObj)
+
+
+BOOLEAN LOGIC RULES FOR PYTHON
+
+Python evaluates expressions from left to right. Notice that while evaluating an assignment, the right-hand side is evaluated before the left-hand side.
+
+In the following lines, expressions will be evaluated in the arithmetic order of their suffixes:
+
+    expr1, expr2, expr3, expr4
+    (expr1, expr2, expr3, expr4)
+    {expr1: expr2, expr3: expr4}
+    expr1 + expr2 * (expr3 - expr4)
+    expr1(expr2, expr3, *expr4, **expr5)
+    expr3, expr4 = expr1, expr2
+
+The following table summarizes the operator precedences in Python, from lowest precedence (least binding)
+to highest precedence (most binding). Operators in the same box have the same precedence. Unless the syntax is
+explicitly given, operators are binary. Operators in the same box group left to right (except for comparisons,
+including tests, which all have the same precedence and chain from left to right — see section Comparisons —
+and exponentiation, which groups from right to left).
+
+              Operator	                                                |                 Description
+lambda	                                                                |    Lambda expression
+if – else	                                                            |    Conditional expression
+or	                                                                    |    Boolean OR
+and	                                                                    |    Boolean AND
+not x	                                                                |    Boolean NOT
+in, not in, is, is not, <, <=, >, >=, <>, !=, ==	                    |    Comparisons, including membership tests and identity tests
+|	                                                                    |    Bitwise OR
+^	                                                                    |    Bitwise XOR
+&	                                                                    |    Bitwise AND
+<<, >>	                                                                |    Shifts
++, -	                                                                |    Addition and subtraction
+*, /, //, %	                                                            |    Multiplication, division, remainder [7]
++x, -x, ~x	                                                            |    Positive, negative, bitwise NOT
+**	                                                                    |    Exponentiation [8]
+x[index], x[index:index], x(arguments...), x.attribute	                |    Subscription, slicing, call, attribute reference
+(expressions...), [expressions...], {key: value...}, `expressions...`	|    Binding or tuple display, list display, dictionary display, string conversion

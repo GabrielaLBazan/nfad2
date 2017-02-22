@@ -37,10 +37,17 @@ actions = [
 question = random.sample(actions, 1)
 
 
-def print_sequence():
-    print numbers
-    print more_numbers
-    print question
+for question in actions:
+    print 'Set 1{}'.format(numbers)
+    print 'Set 2{}\n'.format(more_numbers)
+    print 'What type of Set is this?  {}\n'.format(question)
+    answer = raw_input('> ')
+
+    correct = (str(question)) == (str(an    swer))
+
+    if correct:
+        print "Yeah Buddy!"
+    else:
+        print "Try Again"
 
 
-print_sequence()
