@@ -50,7 +50,7 @@ makeSound(bearObj)
 makeSound(dogObj)
 
 
-BOOLEAN LOGIC RULES FOR PYTHON
+BOOLEAN LOGIC RULES FOR PYTHON  - HOMEWORK
 
 Python evaluates expressions from left to right. Notice that while evaluating an assignment, the right-hand side is evaluated before the left-hand side.
 
