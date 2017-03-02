@@ -1,3 +1,0 @@
-
-
-print "Gabriela is Awesome"
