@@ -33,7 +33,7 @@ SIMPLIFIED
 
 4) If the value of "arr" is None, or an empty list, return 0.
 
-Example:
+Examples:
 
 { 6, 2, 1, 8, 10 } => 16
 { 1, 1, 11, 2, 3 } => 6
