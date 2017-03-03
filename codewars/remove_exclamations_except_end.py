@@ -29,7 +29,7 @@ SIMPLIFIED
 3) You will only be passed a variable of type string, with length greater than 0.
 
 
-Example:
+Examples:
 
 remove("Hi!") => "Hi!"
 remove("Hi!!!") => "Hi!"
