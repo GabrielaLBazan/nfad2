@@ -1,20 +1,48 @@
 
-# Instructions
-# Write function avg which calculates average of numbers in given list.
 
-def find_average(array):
+"""
 
-    # Average = sum of int in array / len (number of ints)
-    array_sum = sum(array)
-    return array_sum / len(array)
+ORIGINAL
+
+Write function avg which calculates average of numbers in given list.
 
 
+"""
 
-# Test.describe('Example test')
+"""
+SIMPLIFIED
+
+1) When the list is empty, return 0.
+
+2) Find the average of a list of integers.
+
+
+Examples:
+
+array = [ 1, 2, 3 ] => 2
+array = [] => 0
+
+"""
+
+# def find_average(array):
+#
+#     sum_of_list = sum(array)
+#
+#     # 1) When the list is empty, return 0.
+#     if len(array) <= 0:
+#         return 0
+#     # 2) Otherwise, find the average of a list of integers.
+#     else:
+#         average = sum_of_list / len(array)
+#
+#     return average
+
+
+def find_average(a): return sum(a)/max(len(a),1)
+
+
 # array = [ 1, 2, 3 ]
 # Test.assert_equals(find_average(array), 2)
-
-# Test.describe('Edge test')
 # array = []
 # Test.assert_equals(find_average(array), 0)
 
@@ -22,7 +50,7 @@ def find_average(array):
 tests = [
 
     {
-        'input': [1, 2, 3],
+        'input': [ 1, 2, 3 ],
         'expected': 2
     },
     {
@@ -30,6 +58,7 @@ tests = [
         'expected': 0
     },
 ]
+
 
 for test in tests:
 
@@ -43,3 +72,4 @@ for test in tests:
 
     else:
         print "FAIL"
+
