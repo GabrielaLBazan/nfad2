@@ -41,6 +41,23 @@ SIMPLIFIED
 
 """
 
+#
+# def count_positives_sum_negatives(arr):
+#
+#     if not arr:
+#         return []
+#
+#     positive_count = 0
+#     negative_sum = 0
+#
+#     for val in arr:
+#         if val >= 1:
+#             positive_count += 1
+#         elif val <= 1:
+#             negative_sum += val
+#
+#     return [positive_count, negative_sum]
+
 
 def count_positives_sum_negatives(arr):
 
@@ -57,6 +74,8 @@ def count_positives_sum_negatives(arr):
             negative_sum += val
 
     return [positive_count, negative_sum]
+
+
 
 
 # Test.describe("Basic tests")
