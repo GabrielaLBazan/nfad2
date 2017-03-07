@@ -58,24 +58,19 @@ SIMPLIFIED
 #
 #     return [positive_count, negative_sum]
 
+#  1) iterate through all items in a if the item is greater than 0 append int 1 to list p
+#  2) iterate through all the items in a if the item is less than 0 append item to list n
+#  3) return an array containing sum(p), sum(n)
 
-def count_positives_sum_negatives(arr):
+# OURS
+# def count_positives_sum_negatives(a): return [sum([1 for v in a if v>0]), sum([v for v in a if v<0])] if a else []
 
-    if not arr:
-        return []
+# THEIRS
+# def count_positives_sum_negatives(arr):
+#     return [len([x for x in arr if x > 0])] + [sum(y for y in arr if y < 0)] if arr else []
 
-    positive_count = 0
-    negative_sum = 0
-
-    for val in arr:
-        if val >= 1:
-            positive_count += 1
-        elif val <= 1:
-            negative_sum += val
-
-    return [positive_count, negative_sum]
-
-
+# OPTIMAL
+def count_positives_sum_negatives(a): return [len([x for x in a if x>0])],sum(y for y in a if y<0) if a else []
 
 
 # Test.describe("Basic tests")
