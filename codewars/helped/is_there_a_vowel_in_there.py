@@ -30,7 +30,7 @@ def is_vow(inp):
         """
 
         :param item: the integer or string
-        :return:
+        :return: the ASCII equivalent of the lowercase vowel string which as been provided in the dict
         """
 
         vowels = {"a": 97, "e": 101, "i": 105, "o": 111, "u": 117}
