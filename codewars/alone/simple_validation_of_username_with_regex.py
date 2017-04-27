@@ -26,7 +26,7 @@ SIMPLIFIED
 
 4) Allow underscore [ _ ]
 
-5) Allow string length from 4 to 16 characters {4, 16}
+5) Allow string length from 4 to 16 characters {4,16}
 
 6) Return "True" if validated, else return "False"
 

@@ -46,7 +46,6 @@ def no_boring_zeros(n):
     return int(''.join(listed))
 
 
-
 # def testing(actual, expected):
 #     Test.assert_equals(actual, expected)
 #
