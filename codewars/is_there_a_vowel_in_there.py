@@ -16,27 +16,26 @@ Return the resulting array.
 """
 SIMPLIFIED
 
-1) Given a list of integers and strings
+1) Given a list of integers
 
-2) Return a list where each string in the original list replace with the integer which
-corresponds to its ASCII character code
+2) Find each integer's ASCII character code (letters e.g. 118 = v, 070 = F)
+
+3) If the character is a lower case vowel (aeiou) replace its integer with the character
+
+4) Return the string with the updated values in place
 
 """
 
 
 def is_vow(inp):
 
-    def swap(item):
-        """
+    vowels = {'a': 97, 'e': 101, 'i': 105, 'o': 111, 'u': 117}
+    for i in inp:
+        for key, value in vowels.items():
+            if i == value:
+                value, key = key, value
+                return inp[value]
 
-        :param item: the integer or string
-        :return: the ASCII equivalent of the lowercase vowel string which as been provided in the dict
-        """
-
-        vowels = {"a": 97, "e": 101, "i": 105, "o": 111, "u": 117}
-        return vowels[item] if item in vowels else item
-
-    return [swap(item) for item in inp]
 
 
 
@@ -58,12 +57,12 @@ def is_vow(inp):
 tests = [
 
     {
-        'input': [118, "u",120,121,"u",98,122,"a",120,106,104,116,113,114,113,120,106 ],
-        'expected': [118,117,120,121,117,98,122,97,120,106,104,116,113,114,113,120,106 ]
+        'input': [118,117,120,121,117,98,122,97,120,106,104,116,113,114,113,120,106 ],
+        'expected': [118, "u",120,121,"u",98,122,"a",120,106,104,116,113,114,113,120,106 ]
     },
     {
-        'input': ["e",121,110,113,113,103,121,121,"e",107,103 ],
-        'expected': [101,121,110,113,113,103,121,121,101,107,103 ]
+        'input': [101,121,110,113,113,103,121,121,101,107,103 ],
+        'expected': ["e",121,110,113,113,103,121,121,"e",107,103 ]
     },
     {
         'input': [118,103,110,109,104,106 ],
@@ -74,8 +73,8 @@ tests = [
         'expected': [107,99,110,107,118,106,112,102 ]
     },
     {
-        'input': [100,100,116,"i","u",121 ],
-        'expected': [100,100,116,105,117,121 ]
+        'input': [100,100,116,105,117,121 ],
+        'expected': [100,100,116,"i","u",121 ]
     }
 ]
 
